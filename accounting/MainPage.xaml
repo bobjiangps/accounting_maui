@@ -4,8 +4,17 @@
              x:Class="accounting.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Margin="30,60,30,30">
+        <VerticalStackLayout x:Name="MyStackLayout" Margin="30,60,30,30">
+            <VerticalStackLayout.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="iOS" Value="Silver" />
+                    <On Platform="Android" Value="Green" />
+                    <On Platform="WinUI" Value="Yellow" />
+                    <On Platform="MacCatalyst" Value="#FFEC8B" />
+                </OnPlatform>
+            </VerticalStackLayout.BackgroundColor>
 
+            <Label Text="Current System: " x:Name="systemHint" />
             <Label Text="Note" HorizontalOptions="Center" FontAttributes="Bold" />
             <Editor x:Name="editor" Placeholder="Enter your note" />
             <Grid ColumnDefinitions="Auto, 20, Auto" HorizontalOptions="End">
