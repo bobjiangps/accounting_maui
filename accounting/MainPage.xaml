@@ -1,25 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:accounting="clr-namespace:accounting"
              x:Class="accounting.MainPage">
 
     <ScrollView>
         <VerticalStackLayout x:Name="MyStackLayout" Margin="30,60,30,30">
+        <!--<VerticalStackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}">-->
+        <!--<VerticalStackLayout BackgroundColor="{OnPlatform #F5F5F5 WinUI=Yellow, iOS=Silver, Android=Green}">-->
             <VerticalStackLayout.BackgroundColor>
                 <OnPlatform x:TypeArguments="Color">
                     <On Platform="iOS" Value="Silver" />
                     <On Platform="Android" Value="Green" />
                     <On Platform="WinUI" Value="Yellow" />
-                    <On Platform="MacCatalyst" Value="#FFEC8B" />
+                    <On Platform="MacCatalyst" Value="#F5F5F5" />
                 </OnPlatform>
             </VerticalStackLayout.BackgroundColor>
 
             <Label Text="Current System: " x:Name="systemHint" />
             <Label Text="Note" HorizontalOptions="Center" FontAttributes="Bold" />
-            <Editor x:Name="editor" Placeholder="Enter your note" />
-            <Grid ColumnDefinitions="Auto, 20, Auto" HorizontalOptions="End">
+            <Border Margin="10" Stroke="#00BFFF" StrokeThickness="2">
+                <Editor x:Name="editor" Placeholder="Enter your note" TextColor="{x:Static Member=accounting:SharedResources.FontColor}" />
+            </Border>
+            <Grid ColumnDefinitions="Auto, 20, Auto, 10" HorizontalOptions="End">
                 <Button Grid.Column="0" Text="Save" Clicked="SaveClicked" />
-                <Button Grid.Column="2" Text="Delete" Clicked="DeleteClicked" />
+                <Button Grid.Column="2" Text="Delete" Clicked="DeleteClicked"
+                        TextColor="{x:Static Member=accounting:SharedResources.FontColor}"
+                        BackgroundColor="{x:Static Member=accounting:SharedResources.BackgroundColor}" />
             </Grid>
 
         </VerticalStackLayout>
