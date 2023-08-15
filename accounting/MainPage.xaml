@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="accounting.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="30,60,30,30">
+
+            <Label Text="Note" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Editor x:Name="editor" Placeholder="Enter your note" />
+            <Grid ColumnDefinitions="Auto, 20, Auto" HorizontalOptions="End">
+                <Button Grid.Column="0" Text="Save" Clicked="SaveClicked" />
+                <Button Grid.Column="2" Text="Delete" Clicked="DeleteClicked" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
