@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:accounting="clr-namespace:accounting"
+             xmlns:fontawesome="clr-namespace:FontAwesome"
              x:Class="accounting.MainPage">
 
     <ScrollView>
@@ -17,6 +18,7 @@
                 </OnPlatform>
             </VerticalStackLayout.BackgroundColor>
 
+            <Label FontFamily="FA-S" Text="{x:Static fontawesome:FAIcons.Display}" FontSize="60" HorizontalOptions="Center"/>
             <Label Text="Current System: " x:Name="systemHint" />
             <Label Text="Note" HorizontalOptions="Center" FontAttributes="Bold" />
             <Border Margin="10" Stroke="#00BFFF" StrokeThickness="2">

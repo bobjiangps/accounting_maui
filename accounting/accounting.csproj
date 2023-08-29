@@ -62,4 +62,20 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Splash\splash.svg" />
+	  <None Remove="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
+	  <None Remove="lib\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Splash\splash.svg" />
+	  <BundleResource Include="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />
+	  <BundleResource Include="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
+	  <BundleResource Include="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="lib\" />
+	</ItemGroup>
 </Project>
