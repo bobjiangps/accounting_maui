@@ -4,12 +4,45 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:accounting"
-    Shell.FlyoutBehavior="Disabled">
+    >
+
+<!--<Shell
+    x:Class="accounting.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:accounting"
+    Shell.FlyoutBehavior="Disabled">-->
 
     <ShellContent
-        Title="Home Page"
+        Title="主页"
+        Icon="icons_home_32.png"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+   <ShellContent Title="收支"
+                 Icon="icons_money_32.png"
+                 ContentTemplate="{DataTemplate local:MainPage}" />
+   <ShellContent Title="图表"
+                 Icon="icons_chart_32.png"
+                 ContentTemplate="{DataTemplate local:MainPage}" />
+   <ShellContent Title="设置"
+                 Icon="icons_setting_32.png"
+                 ContentTemplate="{DataTemplate local:MainPage}" />
+
+      <!--<FlyoutItem Title="Home" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fontawesome:FAIcons.MoneyBillTransfer}, Size=50}">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+          <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-S" Glyph="{x:Static fontawesome:FAIcons.HouseLock}" Color="blue" Size="50"/>
+          </ShellContent.Icon>
+        </ShellContent>
+      </FlyoutItem>
+      <FlyoutItem Title="Settings" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fontawesome:FAIcons.Gear}, Size=50}">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+          <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-S" Glyph="{x:Static fontawesome:FAIcons.ChartPie}" Color="blue" Size="50"/>
+          </ShellContent.Icon>
+        </ShellContent>
+      </FlyoutItem>-->
 
 </Shell>
 

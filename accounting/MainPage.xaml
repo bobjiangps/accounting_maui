@@ -19,6 +19,8 @@
             </VerticalStackLayout.BackgroundColor>
 
             <Label FontFamily="FA-S" Text="{x:Static fontawesome:FAIcons.Display}" FontSize="60" HorizontalOptions="Center"/>
+            <Label FontFamily="FA-S" Text="{x:Static fontawesome:FAIcons.FolderClosed}" FontSize="60" HorizontalOptions="Center"/>
+            <Label FontFamily="FontAwesomeSolid" Text="{x:Static fontawesome:FAIcons.Gear}" FontSize="60" HorizontalOptions="Center"/>
             <Label Text="Current System: " x:Name="systemHint" />
             <Label Text="Note" HorizontalOptions="Center" FontAttributes="Bold" />
             <Border Margin="10" Stroke="#00BFFF" StrokeThickness="2">
