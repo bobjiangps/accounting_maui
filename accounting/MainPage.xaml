@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:accounting="clr-namespace:accounting"
              xmlns:fontawesome="clr-namespace:FontAwesome"
-             x:Class="accounting.MainPage">
+             x:Class="accounting.MainPage"
+             Title="主页">
 
     <ScrollView>
         <VerticalStackLayout x:Name="MyStackLayout" Margin="30,60,30,30">

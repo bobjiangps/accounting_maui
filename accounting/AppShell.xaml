@@ -13,7 +13,8 @@
     xmlns:local="clr-namespace:accounting"
     Shell.FlyoutBehavior="Disabled">-->
 
-    <ShellContent
+
+    <!--<ShellContent
         Title="主页"
         Icon="icons_home_32.png"
         ContentTemplate="{DataTemplate local:MainPage}"
@@ -27,7 +28,8 @@
                  ContentTemplate="{DataTemplate local:MainPage}" />
    <ShellContent Title="设置"
                  Icon="icons_setting_32.png"
-                 ContentTemplate="{DataTemplate local:MainPage}" />
+                 ContentTemplate="{DataTemplate local:MainPage}" />-->
+
 
       <!--<FlyoutItem Title="Home" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fontawesome:FAIcons.MoneyBillTransfer}, Size=50}">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
@@ -43,6 +45,27 @@
           </ShellContent.Icon>
         </ShellContent>
       </FlyoutItem>-->
+
+
+    <TabBar>
+       <Tab Title="主页"
+            Icon="icons_home_32.png">
+           <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+       </Tab>
+       <Tab Title="收支"
+            Icon="icons_money_32.png">
+           <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+       </Tab>
+       <Tab Title="图表"
+            Icon="icons_chart_32.png">
+           <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+       </Tab>
+       <Tab Title="设置"
+            Icon="icons_setting_32.png">
+           <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+       </Tab>
+    </TabBar>
+
 
 </Shell>
 
