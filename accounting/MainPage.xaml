@@ -6,7 +6,7 @@
              x:Class="accounting.MainPage"
              Title="主页">
 
-    <ScrollView>
+    <ScrollView VerticalOptions="FillAndExpand">
         <VerticalStackLayout x:Name="MyStackLayout" Margin="30,60,30,30">
         <!--<VerticalStackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}">-->
         <!--<VerticalStackLayout BackgroundColor="{OnPlatform #F5F5F5 WinUI=Yellow, iOS=Silver, Android=Green}">-->
@@ -33,6 +33,8 @@
                         TextColor="{x:Static Member=accounting:SharedResources.FontColor}"
                         BackgroundColor="{x:Static Member=accounting:SharedResources.BackgroundColor}" />
             </Grid>
+            <Label Text="Message by getting rest api: " x:Name="httpMsg" Margin="10" />
+            <Button Grid.Column="0" x:Name="CallAPIBtn" Text="Call API" Clicked="APIClicked" />
 
         </VerticalStackLayout>
     </ScrollView>

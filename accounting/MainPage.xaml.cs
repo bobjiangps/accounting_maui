@@ -1,4 +1,15 @@
-﻿namespace accounting;
+﻿using System.Net.Http.Json;
+
+
+namespace accounting;
+
+public class Blog
+{
+    public int Id { get; set; }
+    public int UserId { get; set; }
+    public string Body { get; set; }
+    public string Title { get; set; }
+}
 
 public partial class MainPage : ContentPage
 {
@@ -32,6 +43,26 @@ public partial class MainPage : ContentPage
     {
 		editor.Text = "Delete click";
 
+    }
+
+    async void APIClicked(object sender, EventArgs e)
+    {
+        httpMsg.Text = "Message by getting rest api: ";
+        CallAPIBtn.Text = "API Called..Wait..";
+        try
+        {
+            HttpClient client = new HttpClient();
+            Blog text_api_get = await client.GetFromJsonAsync<Blog>("http://jsonplaceholder.typicode.com/posts/1");
+            httpMsg.Text += $"{text_api_get.Id} - {text_api_get.UserId} - {text_api_get.Body} - {text_api_get.Title}";
+            //String text_api_get = await client.GetStringAsync("http://120.78.133.207:8090/tool/share");
+            //httpMsg.Text += text_api_get;
+            CallAPIBtn.Text = "API Called and Completed";
+        }
+        catch (Exception ee)
+        {
+            httpMsg.Text = ee.Message;
+            CallAPIBtn.Text = "API Called and Failed";
+        }
     }
 }
 
